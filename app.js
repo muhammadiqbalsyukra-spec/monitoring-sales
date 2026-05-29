@@ -1,1 +1,1 @@
-console.log("Sales Monitoring Pro");
+console.log("Sales Monitoring Pro ready");
