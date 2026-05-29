@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales Monitoring Pro Ultimate</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb}
+.sidebar{position:fixed;left:0;top:0;width:260px;height:100%;background:#111827;color:#fff;padding:20px;overflow:auto}
+.sidebar a{display:block;color:#d1d5db;text-decoration:none;padding:10px;margin:4px 0}
+.sidebar a:hover{background:#1f2937}
+.main{margin-left:260px;padding:20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card,.panel{background:#fff;border-radius:12px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.value{font-size:28px;font-weight:bold;color:#16a34a}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px;border-bottom:1px solid #ddd;text-align:left}
+input,select,button{padding:10px;border-radius:8px;border:1px solid #ccc}
+button{background:#16a34a;color:white;border:none}
+.panel{margin-top:20px}
+</style>
+</head>
+<body>
+<div class="sidebar">
+<h2>📊 Sales Monitor Pro</h2>
+<a href="#dashboard">Dashboard</a>
+<a href="#sales">Master Sales</a>
+<a href="#outlet">Master Outlet</a>
+<a href="#produk">Master Produk</a>
+<a href="#target">Target Sales</a>
+<a href="#ranking">Ranking</a>
+<a href="#transaksi">Transaksi</a>
+<a href="#laporan">Laporan</a>
+</div>
+
+<div class="main">
+<h1 id="dashboard">Dashboard SPV</h1>
+
+<div class="cards">
+<div class="card"><div>Omzet Hari Ini</div><div class="value">Rp0</div></div>
+<div class="card"><div>Omzet Bulan Ini</div><div class="value">Rp0</div></div>
+<div class="card"><div>Outlet Aktif</div><div class="value">0</div></div>
+<div class="card"><div>Outlet Transaksi Hari Ini</div><div class="value">0</div></div>
+<div class="card"><div>Sales Aktif</div><div class="value">0</div></div>
+<div class="card"><div>Achievement Tim</div><div class="value">0%</div></div>
+</div>
+
+<div class="panel" id="sales">
+<h2>Master Sales</h2>
+<input placeholder="Nama Sales">
+<input placeholder="Area">
+<input placeholder="Target Omzet">
+<button>Simpan Sales</button>
+<table>
+<tr><th>Nama</th><th>Area</th><th>Target</th></tr>
+</table>
+</div>
+
+<div class="panel" id="outlet">
+<h2>Master Outlet</h2>
+<input placeholder="Kode Outlet">
+<input placeholder="Nama Outlet">
+<button>Simpan Outlet</button>
+</div>
+
+<div class="panel" id="produk">
+<h2>Master Produk</h2>
+<input placeholder="Kode Produk">
+<input placeholder="Nama Produk">
+<button>Simpan Produk</button>
+</div>
+
+<div class="panel" id="target">
+<h2>Target Bulanan</h2>
+<table>
+<tr><th>Sales</th><th>Target</th><th>Achievement</th></tr>
+</table>
+</div>
+
+<div class="panel" id="ranking">
+<h2>Ranking Sales</h2>
+<table>
+<tr><th>Rank</th><th>Sales</th><th>Omzet</th></tr>
+</table>
+</div>
+
+<div class="panel" id="transaksi">
+<h2>Input Transaksi</h2>
+<input placeholder="Outlet">
+<input placeholder="Produk">
+<input placeholder="Qty">
+<button>Simpan Transaksi</button>
+</div>
+
+<div class="panel" id="laporan">
+<h2>Laporan</h2>
+<p>Outlet Aktif, Outlet Mati >30 Hari, Top Produk, Top Sales.</p>
+</div>
+
+<script>
+const app={
+firebaseReady:false,
+version:"2.0 Ultimate"
+};
+console.log("Siap integrasi Firebase",app);
+</script>
+</div>
+</body>
+</html>
